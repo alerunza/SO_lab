@@ -1,0 +1,14 @@
+build: 11-esempiomake.o somma.o prodotto.o
+	gcc -o 11-esempiomake *.o
+
+11-esempiomake.o: 11-esempiomake.c
+	gcc -c 11-esempiomake.c
+
+somma.o: somma.c somma.h
+	gcc -c somma.c
+
+prodotto.o: prodotto.c prodotto.h
+	gcc -c prodotto.c
+
+clean:
+	rm -f *.o
